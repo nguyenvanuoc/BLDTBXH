@@ -140,25 +140,44 @@
                             </div>
                             <div class="panel-body">
                                 <ul class="list">
-                                    <li>
+                                    <li class="has-child">
+                                        <span class="down"></span>
                                         <a href="#" class="link">
+
                                             Lãnh đạo Bộ
 
                                         </a>
+                                        <ul class="dropdown">
+                                            <li class="has-child">
+                                                <span class="down"></span>
+                                                <a href="#" class="link">Cơ sở I</a>
+                                                <ul class="dropdown">
+                                                    <li><a href="#"  class="link">Cơ sở I</a></li>
+                                                    <li><a href="#"  class="link">Cơ sở Sơn Tây</a></li>
+                                                    <li><a href="#"  class="link">Cơ sở II</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="#"  class="link">Cơ sở Sơn Tây</a></li>
+                                            <li><a href="#"  class="link">Cơ sở II</a></li>
+                                        </ul>
+
                                     </li>
                                     <li>
+                                        <span class="down"></span>
                                         <a href="#" class="link">
                                            Văn phòng Ban cán sự Đảng
 
                                         </a>
                                     </li>
                                     <li>
+                                        <span class="down"></span>
                                         <a href="#" class="link">
                                            Văn phòng Đảng - Đoàn thể
 
                                         </a>
                                     </li>
                                     <li>
+                                        <span class="down"></span>
                                         <a href="#" class="link">
                                            Vụ Bảo hiểm xã hội
 
@@ -584,6 +603,14 @@
         $('a[data-toggle="tab"]').click(function(){
             $('video').each(function(){this.player.pause()});
             $('#slider-album').resize();
+        });
+        $(".list-child-cctc .list .down").click(function(){
+            $(this).parent().siblings().removeClass("active");
+            if($(this).parent().hasClass("active")){
+                $(this).parent().removeClass("active");
+            }else{
+                $(this).parent().addClass("active");
+            }
         });
         
     </script>

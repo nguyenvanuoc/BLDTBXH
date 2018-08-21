@@ -1457,16 +1457,52 @@ img {
             }
         }
         .list {
-            >li {
+            >li{
+                padding-left: 0px;
+            }
+            .down{
+                width: 12px;
+                height: 12px;
+                text-align: center;
+                line-height: 10px;
+                font-family: ap;
+                position: absolute;
+                top: 3px;
+                color:@main;
+                z-index: 2;
+                font-weight: bold;
+                right: 0px;
+                cursor:pointer;
+                &:before{
+                    content: "\e6b6";
+                }
+            }
+            a{
+                font-size: 13px;
+                .normal;
+                color: #03417b;
+                &:hover {
+                    .underline;
+                }
+            }
+            
+            li{
                 margin-bottom: 5px;
-                >a {
-                    .f13;
-                    .normal;
-                    color: #03417b;
-                    &:hover {
-                        .underline;
+                padding-left: 10px;
+                position: relative;
+                &.active{
+                    >.down{
+                        &:before{
+                            content: "\e6b4";
+                        }
+                    }
+                    >ul{
+                        display: block;
                     }
                 }
+            }
+            .dropdown{
+                display: none;
             }
         }
         @media (max-width: 768px) {
