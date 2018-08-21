@@ -916,6 +916,10 @@ img {
   max-width: 100%;
   display: block;
 }
+.bottom-menu {
+  background: #f6f7f8;
+  padding: 7px 0px;
+}
 /*----Top Banner----*/
 .slick-slide {
   height: auto;
@@ -1002,6 +1006,19 @@ img {
 }
 .top-banner .box-search .form-control:focus {
   width: 250px;
+}
+@media (max-width: 768px) {
+  .top-banner .box-search {
+    width: 100%;
+  }
+  .top-banner .box-search .form-control {
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .top-banner .top-right {
+    width: 100%;
+  }
 }
 .box-search {
   position: relative;
@@ -1537,7 +1554,7 @@ img {
   background: #0f4a84;
 }
 .lang-en .top-banner .box-search {
-  margin-top: 20px;
+  margin-top: 0px;
 }
 .lang-en .top-banner .box-search .form-control {
   border-radius: 2px;
@@ -1695,6 +1712,17 @@ img {
 }
 .lang-en .section.-news .box-news .img-bg {
   height: 200px;
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .lang-en .section.-news .box-news .img-bg {
+    height: 360px;
+  }
+}
+@media (max-width: 480px) {
+  .lang-en .section.-news .box-news .img-bg {
+    height: 360px;
+  }
 }
 .lang-en .section.-news .list-related {
   margin-top: 10px;
@@ -1964,17 +1992,17 @@ img {
   margin-top: 20px;
 }
 /*---------Lanh dao bo-----------*/
-.section.-danhsachlanhdao .box-user {
+.lanh-dao-bo .box-user {
   margin-bottom: 30px;
 }
-.section.-danhsachlanhdao .box-user .avatar {
+.lanh-dao-bo .box-user .avatar {
   width: 113px;
   height: 170px;
   margin: auto;
   margin-bottom: 10px;
   position: relative;
 }
-.section.-danhsachlanhdao .box-user .avatar:before {
+.lanh-dao-bo .box-user .avatar:before {
   content: "";
   position: absolute;
   top: -4px;
@@ -1983,38 +2011,50 @@ img {
   bottom: -4px;
   border: 1px solid #ddd;
 }
-.section.-danhsachlanhdao .box-user .user-info {
+.lanh-dao-bo .box-user .user-info {
   text-align: center;
 }
-.section.-danhsachlanhdao .box-user.-top {
+.lanh-dao-bo .box-user.-top {
   max-width: 300px;
   margin: 30px auto;
 }
-.section.-danhsachlanhdao .box-user.-top .avatar {
+.lanh-dao-bo .box-user.-top .avatar {
   float: left;
 }
-.section.-danhsachlanhdao .box-user.-top .user-info {
+.lanh-dao-bo .box-user.-top .user-info {
   text-align: left;
   margin-left: 130px;
 }
-.section.-danhsachlanhdao .box-user.-top:after {
+.lanh-dao-bo .box-user.-top:after {
   content: "";
   display: block;
   clear: both;
 }
 @media (max-width: 768px) {
-  .section.-danhsachlanhdao .box-user.-top .avatar {
+  .lanh-dao-bo .box-user.-top .avatar {
     float: none;
     margin: auto;
     margin-bottom: 10px;
   }
-  .section.-danhsachlanhdao .box-user.-top .user-info {
+  .lanh-dao-bo .box-user.-top .user-info {
     margin-left: 0px;
     text-align: center;
   }
 }
 .section.-danhsachlanhdao .lanh-dao-bo .title {
   margin-bottom: 20px;
+}
+.section.-danhsachlanhdao .lanh-dao-bo .row.-phobt {
+  text-align: center;
+}
+.section.-danhsachlanhdao .lanh-dao-bo .row.-phobt .col-sm-3 {
+  width: 180px;
+  display: inline-block;
+  float: none;
+}
+.section.-danhsachlanhdao .lanh-dao-bo .row.-phobt.-col5 {
+  max-width: 768px;
+  margin: auto;
 }
 .box-sidebar.-lanhdao .box-user.-top {
   margin-bottom: 5px;
@@ -2023,9 +2063,15 @@ img {
   margin: 0px;
   margin-top: 10px;
 }
+.box-sidebar.-lanhdao .box-user.-top:after {
+  content: "";
+  display: block;
+  clear: both;
+}
 .box-sidebar.-lanhdao .box-user.-top .avatar {
   width: 57px;
   height: 85px;
+  float: left;
   margin-left: 5px;
 }
 .box-sidebar.-lanhdao .box-user.-top .user-info {
@@ -2650,6 +2696,59 @@ img {
   height: 135px;
   width: 105px;
   margin-bottom: 10px;
+}
+.vanphamphapquy .box-sidebar .body {
+  padding: 0px;
+}
+.vanphamphapquy .box-sidebar .g-sb-tt {
+  padding: 7px 10px;
+  background: #439bf1;
+  color: #fff;
+  font-weight: bold;
+}
+.vanphamphapquy .box-sidebar .vanban-menu li a {
+  display: block;
+  padding: 7px 10px;
+  color: #232425;
+}
+.vanphamphapquy .box-sidebar .vanban-menu li a:hover {
+  color: #19669e;
+}
+.vanphamphapquy .box-sidebar .vanban-menu li.active > a {
+  color: #19669e;
+  background: #f6f7f8;
+}
+.vanphamphapquy .box-sidebar .vanban-menu .vb-icon {
+  margin-right: 3px;
+}
+.vanphamphapquy .box-sidebar .vanban-menu > li ul {
+  display: none;
+}
+.vanphamphapquy .box-sidebar .vanban-menu > li.selected > ul {
+  display: block;
+}
+.vanphamphapquy .box-sidebar .vanban-menu > li > a {
+  background: #19669e;
+  color: #fff;
+  font-weight: bold;
+}
+.vanphamphapquy .box-sidebar .vanban-menu > li:hover > a {
+  color: #fff;
+  background: #124a72;
+}
+.vanphamphapquy .banner {
+  padding: 0px;
+  border-radius: 0px;
+  border: 0px;
+}
+.vanphamphapquy .banner img {
+  width: 100%;
+}
+.vanphamphapquy .list-link > li > a {
+  display: block;
+}
+.vanphamphapquy .list-link > li > a img {
+  width: 100%;
 }
 .social .btn {
   width: 30px;
