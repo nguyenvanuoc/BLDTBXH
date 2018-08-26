@@ -346,15 +346,15 @@ img {
         border-top: 3px solid #e78629;
     }
     &.-vbcddh {
-        background: @main;
-        border-radius: 11px;
-        .panel-heading {
-            border-radius: 10px 10px 0px 0px;
-            background: @main;
-            color: #fff;
-        }
+        // background: @main;
+        // border-radius: 11px;
+        // .panel-heading {
+        //     border-radius: 10px 10px 0px 0px;
+        //     background: @main;
+        //     color: #fff;
+        // }
         .panel-body {
-            border-top: 1px solid #ddd;
+            // border-top: 1px solid #ddd;
             padding: 0px;
             height: 418px;
             overflow-y: auto;
@@ -477,6 +477,18 @@ img {
             }
             margin-bottom: 10px;
         }
+        .list-news{
+            >li{
+                margin-bottom: 7px;
+                padding-bottom: 7px;
+                border-bottom: 1px solid #d5d6d7;
+                &:last-child{
+                    border-bottom: 0px;
+                    margin-bottom: 0px;
+                    padding-bottom: 0px;
+                }
+            }
+        }
         @media (max-width: 768px) {
             .panel-body {
                 border-top: 0px;
@@ -521,9 +533,8 @@ img {
     margin-top: 5px;
     border: 1px solid #ddd;
     border-radius: 10px;
-    padding: 15px;
-    height: 333px;
-    overflow-y: auto;
+    padding: 14px 15px;
+    
     .title {
         color: #eb740f;
         .bold;
@@ -535,10 +546,16 @@ img {
         margin-bottom: 10px;
     }
     .list-event {
+        overflow-y: auto;
         >li {
             margin-bottom: 10px;
             border-bottom: 1px solid #ddd;
             padding-bottom: 10px;
+            &:last-child{
+                border-bottom: 0px;
+                margin-bottom: 0px;
+                padding-bottom: 0px;
+            }
             >a {
                 .block;
                 padding-left: 40px;
