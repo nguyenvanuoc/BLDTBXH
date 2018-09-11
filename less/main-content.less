@@ -2379,3 +2379,207 @@ img {
     }
 
 }
+.project-detail{
+    .head{
+        margin:20px 0px;
+        text-align: center;
+        .title{
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+    }
+
+    .tabs{
+        background: #fff;
+        background: #f6f7f8;
+        border:1px solid #e4e5e6;
+        border-bottom: 0px;
+        >li{
+            margin-right: 5px;
+            >a{
+                padding: 10px 20px;
+                text-transform: uppercase;
+                border-bottom: 0px;
+            }
+            &.active{
+                >a{
+                    background:@main;
+                    color:#fff;
+
+                    position: relative;
+                    &:before{
+                        content: "";
+                        position: absolute;
+                        top: -1px;
+                        left: 0px;
+                        right: 0px;
+                        height: 3px;
+                        background: darken(@main,-10);
+                    }
+                }
+            }
+        }
+    }
+    .tab-content{
+        padding: 20px 0px;
+    }
+    .tab-content-parent{
+        border:1px solid #e4e5e6;
+        border-top: 0px;
+        padding:20px;
+    }
+
+    .tabs-line{
+        border-bottom: 2px solid #eee;
+        &:after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+        >li{
+            float: left;
+            margin-right: 30px;
+            >a{
+                display: inline-block;
+                padding:10px 0px;
+                color:#545556;
+                position: relative;
+                font-size: 13px;
+                text-transform: uppercase;
+            }
+            &:hover{
+                >a{
+                    color:@main;
+                }
+            }
+            &.active{
+                >a{
+                    color:@main;
+                    font-weight: bold;
+                    &:before{
+                        content: "";
+                        position: absolute;
+                        bottom: -1px;
+                        left: 0px;
+                        right: 0px;
+                        height: 3px;
+                        background: @main;
+                    }
+
+                }
+            }
+        }
+    }
+    .tb-detail{
+        width: 100%;
+        border:1px solid #eee;
+        td{
+            padding: 7px 10px;
+            border-bottom: 1px solid #eee;
+        }
+        .key{
+            background: #f6f7f8;
+            width: 160px;
+            font-weight: bold;
+        }
+    }
+    .box-stage{
+        margin-bottom: 20px;
+        .title{
+            font-size: 16px;
+            margin-bottom: 10px;
+
+        }
+        .stage{
+            margin-left: 20px;
+            border-left: 1px solid #4bbdad;
+            .item{
+                display: block;
+                color:#232425;
+                padding: 7px 10px;
+                padding-left: 20px;
+                position: relative;
+                &:hover{
+                    color:@main;
+                }
+
+            }
+            .icon{
+                width: 12px;
+                height: 12px;
+                position: absolute;
+                border-radius: 50%;
+                left: -6px;
+                top: 15px;
+                background: @main;
+                &:before{
+                    content: "";
+                    position: absolute;
+                    top: 3px;
+                    left: 3px;
+                    bottom: 3px;
+                    right: 3px;
+                    background: #fff;
+                    border-radius: 50%;
+                }
+
+            }
+            .name{
+                font-weight: bold;
+                display: block;
+            }
+            .date{
+                display: block;
+                opacity: 0.7;
+                font-size: 13px;
+            }
+        }
+    }
+    .sidebar-filter{
+        margin-bottom: 20px;
+        .title{
+            font-weight: bold;
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+        .list{
+            >li{
+                .check{
+                    border-radius: 2px;
+                    width: 16px;
+                    height: 16px;
+                    font-family: ap;
+                    margin-right: 5px;
+                    vertical-align: middle;
+                    font-size: 9px;
+                    display: inline-block;
+                    text-align: center;
+                    line-height: 14px;
+                    border:1px solid #d5d6d7;
+                }
+                >a{
+                    display: block;
+                    color:#222;
+                    padding: 5px 0px;
+                    &:hover{
+                        color:@main;
+                    }
+                }
+                &.active{
+                    >a{
+                        font-weight: bold;
+                        color:#222;
+                    }
+                    .check{
+                        background: #4CAF50;
+                        color:#fff;
+                        border-color: fade(#000,10);
+                        &:before{
+                            content: "\ea2b";
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
