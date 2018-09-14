@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="vendor/jquery-video/css/mediaelementplayer.css">
     <!-- Bootstrap css -->
     <link type="text/css" rel='stylesheet' href="vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="vendor/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css">
     <link rel="stylesheet" href="vendor/slick/slick.css">
     <link rel="stylesheet" href="vendor/ap8/css/style.css">
     <!-- End Bootstrap css -->
@@ -29,6 +30,10 @@
     <!-- Font Icon Ap css -->
 
     <link rel="stylesheet" type="text/css" href="css/style.min.css">
+    <script src="vendor/jquery/jquery.2.1.1.min.js" type="text/javascript"></script>
+    <script src="vendor/jquery/moment.min.js" type="text/javascript"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="vendor/slick/slick.min.js"></script>
 </head>
 
 <body>
@@ -182,14 +187,29 @@
                         </div>  
                         <div class="clearfix"></div>         
                     </div>
-                    <ul class="pagination pull-right">
-                        <li ><a href="#"><span class="fa fa-angle-double-left"></span></a></li>
-                        <li class="active"><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li><a href="#">4</a></li>
-                        <li><a href="#">5</a></li>
-                        <li ><a href="#"><span class="fa fa-angle-double-right"></span></a></li>
-                    </ul>
+                    <div class="bottom">
+                        <div class="pull-left">
+                            <label class="inline pull-left" style="padding-top:5px;margin-right:10px;">
+                                Chọn ngày: 
+                            </label>
+                            <div class="pull-left">
+                                <div class="input-group date"  id='datetimepicker' style="max-width: 160px;">
+                                    
+                                    <input id="date" type="text" class="form-control" name="datetime" placeholder="dd/mm/yyyy">
+                                    <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="pagination pull-right">
+                            <li ><a href="#"><span class="fa fa-angle-double-left"></span></a></li>
+                            <li class="active"><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li ><a href="#"><span class="fa fa-angle-double-right"></span></a></li>
+                        </ul>
+                    </div>
+                    
                 </div>
                 <div class="col-md-4 col-sm-4 col-xs-12">
                     <div class="box-sidebar -menus">
@@ -257,6 +277,83 @@
                    
                 </div>
             </div>
+            <div class="slider-partner"  style="border-top: 1px solid #ddd;padding-top: 20px;">
+                <div class="item">
+                    <div class="post-image" style="background-image: url(http://www.molisa.gov.vn/Images/QuangCao/0312745a-8120-4c0d-b817-ff36918b116e.png);">
+                        <img src="http://www.molisa.gov.vn/Images/QuangCao/0312745a-8120-4c0d-b817-ff36918b116e.png" alt="">
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="post-image" style="background-image: url(http://www.molisa.gov.vn/Images/QuangCao/3b04deb1-868d-4b1a-980e-7974d8f06ac8.jpg);">
+                        <img src="http://www.molisa.gov.vn/Images/QuangCao/0312745a-8120-4c0d-b817-ff36918b116e.png" alt="">
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="post-image" style="background-image: url(http://www.molisa.gov.vn/Images/QuangCao/8c5eb15f-790f-4daa-a806-8ff337e7c6f0.jpg);">
+                        <img src="http://www.molisa.gov.vn/Images/QuangCao/0312745a-8120-4c0d-b817-ff36918b116e.png" alt="">
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="post-image" style="background-image: url(http://www.molisa.gov.vn/Images/QuangCao/902cd5eb-4b5c-434b-93b6-9c2ec136763f.gif);">
+                        <img src="http://www.molisa.gov.vn/Images/QuangCao/0312745a-8120-4c0d-b817-ff36918b116e.png" alt="">
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="post-image" style="background-image: url(http://www.molisa.gov.vn/Images/QuangCao/74da25aa-31d5-4a4a-b6cc-a98551138ff2.png);">
+                        <img src="http://www.molisa.gov.vn/Images/QuangCao/0312745a-8120-4c0d-b817-ff36918b116e.png" alt="">
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="post-image" style="background-image: url(http://www.molisa.gov.vn/Images/QuangCao/61076bf3-a3bd-48d8-9788-8f27b26eee4b.png);">
+                        <img src="http://www.molisa.gov.vn/Images/QuangCao/0312745a-8120-4c0d-b817-ff36918b116e.png" alt="">
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="post-image" style="background-image: url(http://www.molisa.gov.vn/Images/QuangCao/91c4ac89-808f-471c-b8fc-270b4a4f1b8c.png);">
+                        <img src="http://www.molisa.gov.vn/Images/QuangCao/0312745a-8120-4c0d-b817-ff36918b116e.png" alt="">
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="post-image" style="background-image: url(http://www.molisa.gov.vn/Images/QuangCao/b74acf10-5d92-4004-90f9-ab051ef5627d.jpg);">
+                        <img src="http://www.molisa.gov.vn/Images/QuangCao/0312745a-8120-4c0d-b817-ff36918b116e.png" alt="">
+                    </div>
+                </div>
+                
+            </div>
+            <script type="text/javascript">
+                $('.slider-partner').slick({
+                    slidesToShow: 6,
+                    arrows:true,
+                    infinite: true,
+                    autoplay: true,
+                    autoplaySpeed: 5000,
+                    speed: 300,
+                    responsive: [
+                    {
+                      breakpoint: 991,
+                      settings: {
+                        arrows: false,
+                        
+                        slidesToShow: 5
+                      }
+                    },
+                    {
+                      breakpoint: 768,
+                      settings: {
+                        arrows: false,
+                        slidesToShow: 4
+                      }
+                    },
+                    {
+                      breakpoint: 480,
+                      settings: {
+                        arrows: false,
+                        slidesToShow: 2
+                      }
+                    }
+                  ]
+                });
+            </script>
         </div>
     </div>  
     <footer class="footer">
@@ -298,11 +395,10 @@
         </div>
     </footer>
     <div class="scroll-top"><span class="fa fa-angle-up"></span></div>
-    <script src="vendor/jquery/jquery.2.1.1.min.js" type="text/javascript"></script>
-    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-    <script src="vendor/slick/slick.min.js"></script>
+    
     <script src="js/custom.js"></script>
     <script src="vendor/jquery-video/js/mediaelement-and-player.min.js"></script>
+    <script type="text/javascript" src="vendor/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
     <script type="text/javascript" src="https://code.highcharts.com/stock/highstock.js"></script>
     <script>
         $().ready(function (e) {
@@ -310,12 +406,13 @@
             $('#slider-album').slick({
                 dots: false,
                 infinite: true,
+                autoplay: true,
+                autoplaySpeed: 5000,
                 speed: 300,
                 slidesToShow: 1,
                 adaptiveHeight: true,
                 arrows:false,
-                autoplay: true,
-                autoplaySpeed: 5000
+                
             });
             //$('.slick-thumbs').html('');
             //$('.slick-dots').appendTo('.slick-thumbs');
@@ -325,7 +422,12 @@
             $('video').each(function(){this.player.pause()});
             $('#slider-album').resize();
         });
-        
+        $(function () {
+            $('#datetimepicker').datetimepicker({
+                daysOfWeekDisabled: [0, 6],
+                format:"DD/MM/YYYY"
+            });
+        });
     </script>
 </body>
 
