@@ -3243,6 +3243,9 @@ img {
 .mart10 {
   margin-top: 10px !important;
 }
+.phan-anh-kien-nghi {
+  margin-top: 20px;
+}
 .phan-anh-kien-nghi .form-control {
   border-radius: 2px;
   box-shadow: none;
