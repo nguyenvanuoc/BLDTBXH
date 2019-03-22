@@ -143,7 +143,16 @@
                             <a href="#">Văn bản Hợp tác quốc tế</a>
                             <div class="down"></div>
                             <ul>
-                                <li><a href="#">Công ước của tổ chức lao động quốc tế   </a></li>
+                                <li class="selected">
+                                    <a href="#">Công ước của tổ chức lao động quốc tế   </a>
+                                    <div class="down"></div>
+                                    <ul>
+                                        <li><a href="#">Công ước của tổ chức lao động quốc tế   </a></li>
+                                        <li><a href="#">Công ước của tổ chức lao động quốc tế   </a></li>
+                                        <li><a href="#">Công ước của tổ chức lao động quốc tế   </a></li>
+                                        <li><a href="#">Công ước của tổ chức lao động quốc tế   </a></li>
+                                    </ul>
+                                </li>
                                 <li><a href="#">Công ước của tổ chức lao động quốc tế   </a></li>
                                 <li><a href="#">Công ước của tổ chức lao động quốc tế   </a></li>
                                 <li><a href="#">Công ước của tổ chức lao động quốc tế   </a></li>
@@ -377,7 +386,9 @@
             $(".box-search-adv").removeClass("show");
 
         });
-
+        $(".list-document-cat .down").click(function(){
+            $(this).parent().toggleClass("selected");
+        });
     </script>
 </body>
 

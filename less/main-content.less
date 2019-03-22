@@ -3497,21 +3497,27 @@ img {
             width: 20px;
             height: 20px;
             position: absolute;
-            top: 0px;
+            top: 3px;
             cursor:pointer;
             left: 0px;
             line-height: 20px;
             text-align: center;
             font-family: FontAwesome;
             &:before{
-                content: "\f0d7";
+                content: "\f0da";
             }
         }
-        li{
+        ul{
+            display: none;
+        }
+        li.selected{
             >.down{
                 &:before{
-                    content: "\f0da";
+                    content: "\f0d7";
                 }
+            }
+            >ul{
+                display: block;
             }
         }
         a{
