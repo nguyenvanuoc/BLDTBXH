@@ -769,13 +769,19 @@ img {
     .shortdesc {
         margin-left: 130px;
         height: 74px;
-        overflow: hidden;
-        display: block;
-        display: -webkit-box;
-        -webkit-line-clamp: 4;
-        -webkit-box-orient: vertical;
-        text-overflow: ellipsis;
         .excerpt;
+        &.-grey{
+            @media screen and (min--moz-device-pixel-ratio:0), 
+          screen and (-ms-high-contrast: active), 
+          screen and (-ms-high-contrast: none) {
+            &:before {
+                background:#efefef;
+            }
+            &:after {
+                background:#efefef;
+            }
+          }
+        }
     }
 
     @media (max-width: 768px) {
@@ -802,7 +808,6 @@ img {
       bottom: 0;
       position: absolute;
       right: 0;
-      float: right;
       content: '\2026';
     }
     &:after {
@@ -816,8 +821,10 @@ img {
   }
 }
 .hot-news-sapo-x{
-    height: 90px;
-    overflow: hidden;
+    height: 93px;
+    .excerpt;
+    -webkit-line-clamp: 5;
+
 }
 .section.-media {
     .slider-image {
