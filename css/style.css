@@ -1511,11 +1511,56 @@ img {
 }
 .box-news .shortdesc {
   margin-left: 130px;
+  height: 72px;
+  overflow: hidden;
+  display: block;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
 }
 @media (max-width: 768px) {
   .box-news {
     margin-bottom: 20px;
   }
+}
+.excerpt {
+  background: transparent;
+  display: block;
+  /* Fallback for non-webkit */
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+@media screen and (min--moz-device-pixel-ratio: 0), screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
+  .excerpt {
+    overflow: hidden;
+    position: relative;
+  }
+  .excerpt:before {
+    background: transparent;
+    bottom: 0;
+    position: absolute;
+    right: 0;
+    float: right;
+    content: '\2026';
+    margin-left: -3rem;
+    width: 3rem;
+  }
+  .excerpt:after {
+    content: '';
+    background: transparent;
+    position: absolute;
+    height: 50px;
+    width: 100%;
+    z-index: 1;
+  }
+}
+.hot-news-sapo-x {
+  height: 90px;
+  overflow: hidden;
 }
 .section.-media .slider-image .img-bg {
   display: block;
@@ -1913,7 +1958,6 @@ img {
 }
 .news-category .box-news-xx {
   margin-bottom: 20px;
-  text-align: justify;
 }
 .news-category .box-news-xx.cat {
   border-bottom: 1px dotted #ddd;
@@ -3764,6 +3808,33 @@ img {
 .join-status.-joined {
   border-color: #4CAF50;
   color: #4CAF50;
+}
+.partner-content {
+  margin: 20px 0px;
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+.partner-content .partner-item {
+  padding: 10px 0px;
+}
+.partner-content .partner-item > a {
+  display: table;
+  width: 100%;
+}
+.partner-content .partner-item .img {
+  display: table-cell;
+  vertical-align: middle;
+  width: 60px;
+  margin-right: 5px;
+}
+.partner-content .partner-item .text {
+  display: table-cell;
+  vertical-align: middle;
+  padding-left: 10px;
+  color: #03417b;
+  font-size: 13px;
+  font-weight: bold;
 }
 .social .btn {
   width: 26px;

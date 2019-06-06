@@ -768,6 +768,14 @@ img {
 
     .shortdesc {
         margin-left: 130px;
+        height: 74px;
+        overflow: hidden;
+        display: block;
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        text-overflow: ellipsis;
+        .excerpt;
     }
 
     @media (max-width: 768px) {
@@ -775,6 +783,42 @@ img {
     }
 }
 
+.excerpt{
+  background:transparent;
+  display: block; /* Fallback for non-webkit */
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  // Fallback for non-webkit
+  @media screen and (min--moz-device-pixel-ratio:0), 
+  screen and (-ms-high-contrast: active), 
+  screen and (-ms-high-contrast: none) {
+    overflow: hidden;
+    position: relative;
+    &:before {
+      background:#fff;
+      bottom: 0;
+      position: absolute;
+      right: 0;
+      float: right;
+      content: '\2026';
+    }
+    &:after {
+      content: '';
+      background:#fff;
+      position: absolute;
+      height: 50px;
+      width: 100%;
+      z-index: 1;
+    }
+  }
+}
+.hot-news-sapo-x{
+    height: 90px;
+    overflow: hidden;
+}
 .section.-media {
     .slider-image {
         .img-bg {
